@@ -59,3 +59,28 @@ fileprivate class ImageCache {
         }
     }
 }
+
+fileprivate class ImageCacheManager {
+
+    static let shared  = ImageCacheManager()
+
+    private init() {}
+
+    private var cache: NSCache<NSString, UIImage> = {
+        let cache = NSCache<NSString, UIImage>()
+        cache.countLimit = 20
+        cache.totalCostLimit = 20 * 1024 * 1024 // 20MB
+        return cache
+    }()
+
+    func saveImage(_ image: UIImage, name: String) {
+        cache.setObject(image, forKey: name as NSString)
+    }
+
+    func getImage(with name: String) -> Image? {
+        guard let image = cache.object(forKey: name as NSString) else {
+            return nil
+        }
+        return Image(uiImage: image)
+    }
+}
