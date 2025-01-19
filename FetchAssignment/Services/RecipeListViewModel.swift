@@ -19,7 +19,7 @@ class RecipeListViewModel {
         self.dataManager = dataManager
     }
 
-    func fetchRecipes() async throws {
+    func getRecipes() async throws {
         let recipes = try await dataManager.fetchRecipes()
         await MainActor.run {
             groupedRecipes = groupRecipesByCuisine(recipes)
