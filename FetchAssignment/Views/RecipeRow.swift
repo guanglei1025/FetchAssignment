@@ -17,7 +17,7 @@ struct RecipeRow: View {
 
     var body: some View {
         HStack {
-            AsyncImage(url: recipe.iconURL) { phase in
+            CachedAsyncImage(url: recipe.iconURL!) { phase in
                 switch phase {
                 case .success(let image):
                     image
