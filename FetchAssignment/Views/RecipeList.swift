@@ -16,13 +16,21 @@ struct RecipeList: View {
             List(viewModel.recipes) { recipe in
                 RecipeRow(recipe)
             }
+            .navigationTitle("Recipes")
             .refreshable {
-                try? await viewModel.fetchRecipes()
+                do {
+                    try await viewModel.fetchRecipes()
+                } catch {
+                    print("Please handle error: \(error)")
+                }
             }
             .task {
-                try? await viewModel.fetchRecipes()
+                do {
+                    try await viewModel.fetchRecipes()
+                } catch {
+                    print("Please handle error: \(error)")
+                }
             }
-            .navigationTitle("Recipes")
         }
     }
 }
