@@ -15,11 +15,14 @@ class RecipeAPIService: RecipeAPIFetching {
 
     enum RecipeAPIServiceError: LocalizedError {
         case invalidURL
+        case serverError
 
         var errorDescription: String? {
             switch self {
             case .invalidURL:
                 return "Invalid URL"
+            case .serverError:
+                return "Invalid status code from server"
             }
         }
     }
@@ -28,7 +31,14 @@ class RecipeAPIService: RecipeAPIFetching {
         guard let url = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json") else {
             throw RecipeAPIServiceError.invalidURL
         }
-        let (data, _) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await URLSession.shared.data(from: url)
+
+        guard let httpResponse = response as? HTTPURLResponse,
+              200..<300 ~= httpResponse.statusCode
+        else {
+            throw RecipeAPIServiceError.serverError
+        }
+
         return try JSONDecoder().decode(RecipeResponse.self, from: data).recipes
     }
 }
