@@ -13,6 +13,12 @@ protocol RecipeAPIFetching {
 
 class RecipeAPIService: RecipeAPIFetching {
 
+    private let session: URLSessionProtocol
+
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
+
     func fetchRecipes() async throws -> [Recipe] {
         guard let url = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json") else {
             throw URLError(.badURL)
@@ -29,3 +35,8 @@ class RecipeAPIService: RecipeAPIFetching {
     }
 }
 
+public protocol URLSessionProtocol {
+    func data(from url: URL) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: URLSessionProtocol { }
