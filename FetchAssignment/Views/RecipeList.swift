@@ -13,7 +13,7 @@ struct RecipeList: View {
 
     var body: some View {
         NavigationStack {
-            List(viewModel.recipes, id: \.self) { recipe in
+            List(viewModel.recipes) { recipe in
                 RecipeRow(recipe)
             }
             .refreshable {

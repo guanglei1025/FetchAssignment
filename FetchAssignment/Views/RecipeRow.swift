@@ -17,20 +17,8 @@ struct RecipeRow: View {
 
     var body: some View {
         HStack {
-            CachedAsyncImage(url: recipe.iconURL!) { phase in
-                switch phase {
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 44, height: 44)
-                        .cornerRadius(5)
-                case .failure:
-                    Image(systemName: "slash.circle")
-                default:
-                    Image(systemName: "book")
-                }
-            }
+            CachedImageView(url: recipe.smallIconURL, recipeId: recipe.id)
+                .frame(width: 50, height: 50)
 
             VStack(alignment: .leading) {
                 Text(recipe.name)
