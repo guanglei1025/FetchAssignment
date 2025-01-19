@@ -13,9 +13,7 @@ struct RecipeList: View {
 
     var body: some View {
         NavigationStack {
-            List(viewModel.recipes) { recipe in
-                RecipeRow(recipe)
-            }
+            bodyContent
             .navigationTitle("Recipes")
             .refreshable {
                 do {
@@ -29,6 +27,18 @@ struct RecipeList: View {
                     try await viewModel.fetchRecipes()
                 } catch {
                     print("Please handle error: \(error)")
+                }
+            }
+        }
+    }
+
+    private var bodyContent: some View {
+        List {
+            ForEach(Array(viewModel.groupedRecipes.keys), id: \.self) { section in
+                Section(header: Text(section)) {
+                    ForEach(viewModel.groupedRecipes[section] ?? []) { recipe in
+                        RecipeRow(recipe)
+                    }
                 }
             }
         }

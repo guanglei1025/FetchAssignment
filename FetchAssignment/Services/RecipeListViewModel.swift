@@ -11,7 +11,7 @@ import Observation
 @Observable
 class RecipeListViewModel {
 
-    private(set) var recipes = [Recipe]()
+    private(set) var groupedRecipes = [String: [Recipe]]()
 
     private var dataManager: RecipeDataManaging
 
@@ -20,6 +20,13 @@ class RecipeListViewModel {
     }
 
     func fetchRecipes() async throws {
-        recipes = try await dataManager.fetchRecipes()
+        let recipes = try await dataManager.fetchRecipes()
+        await MainActor.run {
+            groupedRecipes = groupRecipesByCuisine(recipes)
+        }
+    }
+
+    func groupRecipesByCuisine(_ recipes: [Recipe]) -> [String: [Recipe]] {
+        Dictionary(grouping: recipes, by: { $0.cuisine })
     }
 }
