@@ -25,7 +25,7 @@ struct FetchAssignmentApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipeList()
         }
         .modelContainer(sharedModelContainer)
     }
