@@ -29,7 +29,6 @@ class RecipeAPIService: RecipeAPIFetching {
 
         let (data, response) = try await session.data(from: url)
 
-        print(String(data: data, encoding: .utf8) ?? "No data")
         guard let httpResponse = response as? HTTPURLResponse,
               200..<300 ~= httpResponse.statusCode
         else {
