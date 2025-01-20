@@ -28,15 +28,17 @@ class CachedImageViewModel {
         if let savedImage = cacheManager.getImage(key: recipeId) {
             image = savedImage
         } else {
-            Task {
-                await downloadImage()
+            if isLoading == false {
+                isLoading = true
+                Task {
+                    await downloadImage()
+                }
             }
         }
     }
 
     @MainActor
     private func downloadImage() async {
-        isLoading = true
         guard let url = URL(string: urlString) else {
             isLoading = false
             return
@@ -45,7 +47,10 @@ class CachedImageViewModel {
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
 
-            guard let image = UIImage(data: data) else { return }
+            guard let image = UIImage(data: data) else {
+                isLoading = false
+                return
+            }
             self.image = image
 
             // Save Image to cache manager
