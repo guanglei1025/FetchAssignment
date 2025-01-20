@@ -15,16 +15,21 @@ class RecipeAPIService: RecipeAPIFetching {
 
     private let session: URLSessionProtocol
 
+    let baseURL = "https://d3jbb8n5wk0qxi.cloudfront.net"
+    let path = "recipes.json"
+
     init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
 
     func fetchRecipes() async throws -> [Recipe] {
-        guard let url = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json") else {
+        guard let url = URL(string: baseURL)?.appendingPathComponent(path) else {
             throw URLError(.badURL)
         }
-        let (data, response) = try await URLSession.shared.data(from: url)
 
+        let (data, response) = try await session.data(from: url)
+
+        print(String(data: data, encoding: .utf8) ?? "No data")
         guard let httpResponse = response as? HTTPURLResponse,
               200..<300 ~= httpResponse.statusCode
         else {
