@@ -42,6 +42,11 @@ struct RecipeList: View {
                 }
             }
         }
+        .overlay {
+            if viewModel.groupedRecipes.isEmpty {
+                ContentUnavailableView("Empty Recipe List", systemImage: "heart.fill")
+            }
+        }
     }
 }
 

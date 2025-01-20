@@ -32,5 +32,5 @@ struct RecipeRow: View {
 }
 
 #Preview {
-    RecipeRow(Recipe.Mock())
+    RecipeRow(Recipe.mockData())
 }

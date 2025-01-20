@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Repository layer: Handle fetching data from different data source. (e.g. SwiftData, FileManager, Server)
+/// Pass `ModelContext` from init if want to implement SwiftData
+
 protocol RecipeDataManaging {
     func fetchRecipes() async throws -> [Recipe]
 }

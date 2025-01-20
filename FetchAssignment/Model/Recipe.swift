@@ -33,7 +33,7 @@ struct Recipe: Codable, Identifiable, Equatable {
 }
 
 extension Recipe {
-    static func Mock() -> Recipe {
+    static func mockData() -> Recipe {
         Recipe(
             id: "eed6005f-f8c8-451f-98d0-4088e2b40eb6",
             name: "Name",

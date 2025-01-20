@@ -8,18 +8,29 @@
 import Foundation
 import Observation
 
+/// UI layer: Include business logic and update UI
+
 @Observable
 class RecipeListViewModel {
 
     private(set) var groupedRecipes = [String: [Recipe]]()
 
-    private var dataManager: RecipeDataManaging
+    private let dataManager: RecipeDataManaging
+
+    /// Avoid making multiple calls
+    private var isFetching = false
 
     init(dataManager: RecipeDataManaging = RecipeDataManager()) {
         self.dataManager = dataManager
     }
 
     func getRecipes() async throws {
+        guard isFetching == false else {
+            return
+        }
+        isFetching = true
+        defer { isFetching = false }
+
         let recipes = try await dataManager.fetchRecipes()
         await MainActor.run {
             groupedRecipes = groupRecipesByCuisine(recipes)

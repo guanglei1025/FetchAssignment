@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Network layer:  Handle API calls
+
 protocol RecipeAPIFetching {
     func fetchRecipes() async throws -> [Recipe]
 }
