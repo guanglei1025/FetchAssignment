@@ -24,25 +24,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A18C08BE2D3C9D8000E36CE8 /* FetchAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18C08D02D3C9D8100E36CE8 /* FetchAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18C08DA2D3C9D8100E36CE8 /* FetchAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18C08BE2D3C9D8000E36CE8 /* RecipesApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18C08D02D3C9D8100E36CE8 /* RecipesApp_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesApp_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18C08DA2D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesApp_SwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A18C08C02D3C9D8000E36CE8 /* FetchAssignment */ = {
+		A18C08C02D3C9D8000E36CE8 /* RecipesApp_SwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchAssignment;
+			path = RecipesApp_SwiftUI;
 			sourceTree = "<group>";
 		};
-		A18C08D32D3C9D8100E36CE8 /* FetchAssignmentTests */ = {
+		A18C08D32D3C9D8100E36CE8 /* RecipesApp_SwiftUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchAssignmentTests;
+			path = RecipesApp_SwiftUITests;
 			sourceTree = "<group>";
 		};
-		A18C08DD2D3C9D8100E36CE8 /* FetchAssignmentUITests */ = {
+		A18C08DD2D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchAssignmentUITests;
+			path = RecipesApp_SwiftUIUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		A18C08B52D3C9D7F00E36CE8 = {
 			isa = PBXGroup;
 			children = (
-				A18C08C02D3C9D8000E36CE8 /* FetchAssignment */,
-				A18C08D32D3C9D8100E36CE8 /* FetchAssignmentTests */,
-				A18C08DD2D3C9D8100E36CE8 /* FetchAssignmentUITests */,
+				A18C08C02D3C9D8000E36CE8 /* RecipesApp_SwiftUI */,
+				A18C08D32D3C9D8100E36CE8 /* RecipesApp_SwiftUITests */,
+				A18C08DD2D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests */,
 				A18C08BF2D3C9D8000E36CE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		A18C08BF2D3C9D8000E36CE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18C08BE2D3C9D8000E36CE8 /* FetchAssignment.app */,
-				A18C08D02D3C9D8100E36CE8 /* FetchAssignmentTests.xctest */,
-				A18C08DA2D3C9D8100E36CE8 /* FetchAssignmentUITests.xctest */,
+				A18C08BE2D3C9D8000E36CE8 /* RecipesApp_SwiftUI.app */,
+				A18C08D02D3C9D8100E36CE8 /* RecipesApp_SwiftUITests.xctest */,
+				A18C08DA2D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A18C08BD2D3C9D8000E36CE8 /* FetchAssignment */ = {
+		A18C08BD2D3C9D8000E36CE8 /* RecipesApp_SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A18C08E42D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "FetchAssignment" */;
+			buildConfigurationList = A18C08E42D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "RecipesApp_SwiftUI" */;
 			buildPhases = (
 				A18C08BA2D3C9D8000E36CE8 /* Sources */,
 				A18C08BB2D3C9D8000E36CE8 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A18C08C02D3C9D8000E36CE8 /* FetchAssignment */,
+				A18C08C02D3C9D8000E36CE8 /* RecipesApp_SwiftUI */,
 			);
-			name = FetchAssignment;
+			name = RecipesApp_SwiftUI;
 			packageProductDependencies = (
 			);
 			productName = FetchAssignment;
-			productReference = A18C08BE2D3C9D8000E36CE8 /* FetchAssignment.app */;
+			productReference = A18C08BE2D3C9D8000E36CE8 /* RecipesApp_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A18C08CF2D3C9D8100E36CE8 /* FetchAssignmentTests */ = {
+		A18C08CF2D3C9D8100E36CE8 /* RecipesApp_SwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A18C08E72D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "FetchAssignmentTests" */;
+			buildConfigurationList = A18C08E72D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "RecipesApp_SwiftUITests" */;
 			buildPhases = (
 				A18C08CC2D3C9D8100E36CE8 /* Sources */,
 				A18C08CD2D3C9D8100E36CE8 /* Frameworks */,
@@ -131,18 +131,18 @@
 				A18C08D22D3C9D8100E36CE8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A18C08D32D3C9D8100E36CE8 /* FetchAssignmentTests */,
+				A18C08D32D3C9D8100E36CE8 /* RecipesApp_SwiftUITests */,
 			);
-			name = FetchAssignmentTests;
+			name = RecipesApp_SwiftUITests;
 			packageProductDependencies = (
 			);
 			productName = FetchAssignmentTests;
-			productReference = A18C08D02D3C9D8100E36CE8 /* FetchAssignmentTests.xctest */;
+			productReference = A18C08D02D3C9D8100E36CE8 /* RecipesApp_SwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A18C08D92D3C9D8100E36CE8 /* FetchAssignmentUITests */ = {
+		A18C08D92D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A18C08EA2D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "FetchAssignmentUITests" */;
+			buildConfigurationList = A18C08EA2D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "RecipesApp_SwiftUIUITests" */;
 			buildPhases = (
 				A18C08D62D3C9D8100E36CE8 /* Sources */,
 				A18C08D72D3C9D8100E36CE8 /* Frameworks */,
@@ -154,13 +154,13 @@
 				A18C08DC2D3C9D8100E36CE8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A18C08DD2D3C9D8100E36CE8 /* FetchAssignmentUITests */,
+				A18C08DD2D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests */,
 			);
-			name = FetchAssignmentUITests;
+			name = RecipesApp_SwiftUIUITests;
 			packageProductDependencies = (
 			);
 			productName = FetchAssignmentUITests;
-			productReference = A18C08DA2D3C9D8100E36CE8 /* FetchAssignmentUITests.xctest */;
+			productReference = A18C08DA2D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A18C08B92D3C9D7F00E36CE8 /* Build configuration list for PBXProject "FetchAssignment" */;
+			buildConfigurationList = A18C08B92D3C9D7F00E36CE8 /* Build configuration list for PBXProject "RecipesApp_SwiftUI" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -201,9 +201,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A18C08BD2D3C9D8000E36CE8 /* FetchAssignment */,
-				A18C08CF2D3C9D8100E36CE8 /* FetchAssignmentTests */,
-				A18C08D92D3C9D8100E36CE8 /* FetchAssignmentUITests */,
+				A18C08BD2D3C9D8000E36CE8 /* RecipesApp_SwiftUI */,
+				A18C08CF2D3C9D8100E36CE8 /* RecipesApp_SwiftUITests */,
+				A18C08D92D3C9D8100E36CE8 /* RecipesApp_SwiftUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,12 +259,12 @@
 /* Begin PBXTargetDependency section */
 		A18C08D22D3C9D8100E36CE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A18C08BD2D3C9D8000E36CE8 /* FetchAssignment */;
+			target = A18C08BD2D3C9D8000E36CE8 /* RecipesApp_SwiftUI */;
 			targetProxy = A18C08D12D3C9D8100E36CE8 /* PBXContainerItemProxy */;
 		};
 		A18C08DC2D3C9D8100E36CE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A18C08BD2D3C9D8000E36CE8 /* FetchAssignment */;
+			target = A18C08BD2D3C9D8000E36CE8 /* RecipesApp_SwiftUI */;
 			targetProxy = A18C08DB2D3C9D8100E36CE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -464,7 +464,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FetchAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipesApp_SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecipesApp_SwiftUI";
 			};
 			name = Debug;
 		};
@@ -484,7 +484,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FetchAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipesApp_SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecipesApp_SwiftUI";
 			};
 			name = Release;
 		};
@@ -525,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A18C08B92D3C9D7F00E36CE8 /* Build configuration list for PBXProject "FetchAssignment" */ = {
+		A18C08B92D3C9D7F00E36CE8 /* Build configuration list for PBXProject "RecipesApp_SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18C08E22D3C9D8100E36CE8 /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A18C08E42D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "FetchAssignment" */ = {
+		A18C08E42D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "RecipesApp_SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18C08E52D3C9D8100E36CE8 /* Debug */,
@@ -543,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A18C08E72D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "FetchAssignmentTests" */ = {
+		A18C08E72D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "RecipesApp_SwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18C08E82D3C9D8100E36CE8 /* Debug */,
@@ -552,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A18C08EA2D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "FetchAssignmentUITests" */ = {
+		A18C08EA2D3C9D8100E36CE8 /* Build configuration list for PBXNativeTarget "RecipesApp_SwiftUIUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18C08EB2D3C9D8100E36CE8 /* Debug */,
